@@ -1,0 +1,14 @@
+<?php
+$servidor = "localhost";
+$usuario = "root"; // Nombre de usuario de MySQL (por defecto "root")
+$clave = ""; // Contraseña de MySQL (por defecto vacía)
+$base_de_datos = "mi_aplicacion"; // Nombre de la base de datos
+
+// Crear la conexión
+$conn = new mysqli($servidor, $usuario, $clave, $base_de_datos);
+
+// Verificar si la conexión es exitosa
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+?>
